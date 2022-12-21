@@ -70,7 +70,6 @@ Run a command to start the app.js file we have created:
 Run following commands in terminal.
 buld: "-t" is the tag, "hello-docker" is the file to be created,"." is the current directory. :
 	docker build -t hello-docker .
-	
 #Docker image
 To view all images run:
 	docker image ls
@@ -84,21 +83,48 @@ To run the image, regardless of the directory on is, run :
 url -> https://hub.docker.com/repositories/martinngigi
 Create docker image docker hub similar to the one present locally
 
-docker tag local-image:tagname new-repo:tagname
-docker push new-repo:tagname
+	docker tag local-image:tagname new-repo:tagname
+	docker push new-repo:tagname
 
 i.e.
 docker tag hello-docker:latest hello-docker:latest
 docker push hello-docker:latest
 
 i.e. 2 (Working)
-docker login -u martinngigi
-docker tag hello-docker:latest martinngigi/hello-docker:myfirstimagepush
-docker push martinngigi/hello-docker:myfirstimagepush
+	docker login -u martinngigi
+	docker tag hello-docker:latest martinngigi/hello-docker:myfirstimagepush
+	docker push martinngigi/hello-docker:myfirstimagepush
 
 #Pulling docker image and it in play-with-docker:
 url -> https://labs.play-with-docker.com/
-docker login
-docker pull martinngigi/hello-docker:myfirstimagepush
+	docker login
+	docker pull martinngigi/hello-docker:myfirstimagepush
+	
+run docker while in play-with-docker
+	docker run martinngigi/hello-docker:myfirstimagepush
+	
+#LINUX COMMANDS(Ubuntu)
+cd C:\Users\Administrator\Desktop\Docker\docker-tutorial-1\hello-docker>
+Running ubuntu:
+	docker run ubuntu
+View running containers:
+	docker ps
+View all running containers:
+	docker ps -a
+Start and run a container and interact with it. The result is "root@bfccb2f89288:/#" 
+... This is a shell. A shell is a program that takes our commands and passes them to the OS for execution.
+"root" the current logged in user. "bfccb2f89288" is the name of the machine. "/" is the root directory. "#" Means we have the highest privileges.
+"it"  stands for interactive:
+	docker run -it ubuntu
+	
+while in "root@bfccb2f89288:/#" 
+run following commands:
+	echo Hello world
+	whoami						-> This will who show current logged in user
+	echo $0 					-> This will show current dir of the program
+	history						-> This will show previously typed commands
+	
+	
 
-
+	
+	
