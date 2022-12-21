@@ -165,5 +165,54 @@ remove/delete nano:
 	- /var -> where files are updated frequently
 	- /proc -> running process.
 	
+<br>
+- list in vertical:
+ls -1
+- list with additional details:
+ls -l
+- navigate to home directory:
+cd ~
+- make directory called test:
+ mkdir test
+- rename or move folders:
+ mv test docker
+- navigate to docker dir:
+ cd docker/
+- create a hello file:
+ touch hello.txt
+- create multiple files:
+ touch hello1.txt hello2.txt hello3.txt
+- rename hello to myhello:
+ mv hello.txt myhello.txt
+- remove file:
+ rm hello3.txt
+ - remove directory:
+ rm -r docker/
+ 
+## Using nano text editor
+- create new file:
+ rm file.txt
+- view contents of a file:
+ cat file.txt
+- Paginate a long file... pres spce to go to next page. press q to exit.
+ more /etc/adduser.conf
+
+## Using less to view files
+- install less:
+ apt install less
+- view document:
+ less /etc/adduser.conf
+- view only 5 lines of the file
+ head -n 5 /etc/adduser.conf
+- view last 5 lines of file
+ tail -n 5 /etc/adduser.conf
+- concatenate two files to one file
+ cat file.txt file2.txt > combined.txt
+- echo a file
+ echo Martin Wainaina > martin.txt
+ 
+
+
+	
 	
 	
