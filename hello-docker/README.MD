@@ -32,18 +32,6 @@ Docker remove app command:
 4. Start quickly - fast.
 5. Need less hardware resorce - i.e. ram, cpu, disk.
 
-Check version: 
-	docker version
-
-#Deploying an application
-Paste the following commands in the Dockerfile
-Import node:alpine  distribution of linux image:
-	FROM node:alpine
-Copy evrything from current directory i.e. "." to "app" directory:
-	COPY . /app
-Specify the work directory:
-	WORKDIR /app
-Run a command to start the app.js file we have created:
 	CMD node app.js 
 
 #Docker architecture.
@@ -63,6 +51,35 @@ Run a command to start the app.js file we have created:
 
 From development, we push the image to Registry (DockerHub - ie similar to github for storage), in Test/Production environment we can run the app stored in Registry.
 
+#Check version
+Run: 
+	docker version
+
+#Deploying an application
+Paste the following commands in the Dockerfile
+Import node:alpine  distribution of linux image:
+	FROM node:alpine
+Copy evrything from current directory i.e. "." to "app" directory:
+	COPY . /app
+Specify the work directory:
+	WORKDIR /app
+Run a command to start the app.js file we have created:
+	CMD node app.js 
+
+#Packaging the application
+Run following commands in terminal.
+buld: "-t" is the tag, "hello-docker" is the file to be created,"." is the current directory. :
+	docker build -t hello-docker .
+	
+#Docker image
+To view all images run:
+	docker image ls
+or:
+	docker images
+
+To run the image, regardless of the directory on is, run :
+	docker run hello-docker
+	
 #Create repository in docker hub
 url -> https://hub.docker.com/repositories/martinngigi
 Create docker image docker hub similar to the one present locally
@@ -83,3 +100,5 @@ docker push martinngigi/hello-docker:myfirstimagepush
 url -> https://labs.play-with-docker.com/
 docker login
 docker pull martinngigi/hello-docker:myfirstimagepush
+
+
