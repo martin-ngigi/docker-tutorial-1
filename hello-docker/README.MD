@@ -154,8 +154,8 @@ remove/delete nano:
 	
 	
 ## LINUX Directory
-/ -> Root 
-- /bin -> binaries or programs.
+- / -> Root 
+	- /bin -> binaries or programs.
 	- /boot -> booting files.
 	- /dev -> devices.
 	- /etc -> editable text configuration.
