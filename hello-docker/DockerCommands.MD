@@ -1,7 +1,7 @@
 Check version: 
 	docker version
 
-#Deploying an application
+# Deploying an application
 Paste the following commands in the Dockerfile
 Import node:alpine  distribution of linux image:
 	FROM node:alpine
@@ -12,12 +12,12 @@ Specify the work directory:
 Run a command to start the app.js file we have created:
 	CMD node app.js 
 
-#Packaging the application
+# Packaging the application
 Run following commands in terminal.
 buld: "-t" is the tag, "hello-docker" is the file to be created,"." is the current directory. :
 	docker build -t hello-docker .
 	
-#Docker image
+# Docker image
 To view all images run:
 	docker image ls
 or:
@@ -50,7 +50,7 @@ url -> https://labs.play-with-docker.com/
 run docker while in play-with-docker
 	docker run martinngigi/hello-docker:myfirstimagepush
 
-#LINUX COMMANDS(Ubuntu)
+# LINUX COMMANDS(Ubuntu)
 cd C:\Users\Administrator\Desktop\Docker\docker-tutorial-1\hello-docker>
 Running ubuntu:
 	docker run ubuntu
@@ -65,3 +65,24 @@ run following commands:
 	whoami						
 	echo $0 				
 	history	
+	
+# Managing packages
+while in "root@bfccb2f89288:/#" 
+apt -> advanced package tool
+run:
+	apt
+
+view all installed packages
+	apt list
+	
+Update apt:
+	apt update
+
+Install nano -> a text editor for linux. run:
+	apt install nano 
+run nano:
+	nano
+exit nano:
+	ctrl + x
+remove/delete nano:
+	apt remove nano
