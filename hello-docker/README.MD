@@ -6,11 +6,11 @@ Play with docker -> https://labs.play-with-docker.com/
 
 <br><br>
 
-# Docker
+## Docker
 Is a latform for building, running and shipping applications. i.e. if your application runs in developing machine, it will also run in another machine.
 
 <br>
-# Reasons why app may fail to run in another machine:
+## Reasons why app may fail to run in another machine:
 	-One or more missing files.
 	-Software version mismatch.
 	-Different configuration settings.
@@ -21,15 +21,15 @@ Docker remove app command:
 	docker-compose down rmi --all
 	
 <br>
-# Container Vs Virtual machines:
+## Container Vs Virtual machines:
 - 1. Container is an isolated environment for running an application while Virtual machine is an abstraction of machine(physical hardware).
-
-# Problems of running application in a virtual machine:
+<br>	
+## Problems of running application in a virtual machine:
 - 1. Each VM requires a full-blown Os.
 - 2. Slow to start.
 -3. Resource intensive i.e. cpu, RAM.
-
-#Adavntages of running application in a container:
+<br>	
+## Adavntages of running application in a container:
 1. Allow runnig multiple applications in isolation.
 2. Lightweight - dont need a full OS.
 3. Use the OS of the host.
@@ -37,11 +37,11 @@ Docker remove app command:
 5. Need less hardware resorce - i.e. ram, cpu, disk.
 
 	CMD node app.js 
-
-# Docker architecture.
+<br>	
+## Docker architecture.
 - Uses a client server(Docker Engine.) architecture.
 - Client communicates to the server through server API.
-
+<br>	
 #Dockerizing application,
 - Making small change so that the app can be run by docker by running a docker file.
 - Docker fle - a plain text file that docker uses to package the app into an image.
@@ -54,12 +54,12 @@ Docker remove app command:
 -Once we have the image, we tell docker to start the container using that image.
 
 From development, we push the image to Registry (DockerHub - ie similar to github for storage), in Test/Production environment we can run the app stored in Registry.
-
-# Check version
-Run: 
+<br>	
+## Check version
+Run: <br>	
 	docker version
-
-# Deploying an application
+<br>	
+## Deploying an application
 Paste the following commands in the Dockerfile
 Import node:alpine  distribution of linux image:
 	FROM node:alpine
@@ -69,12 +69,13 @@ Specify the work directory:
 	WORKDIR /app
 Run a command to start the app.js file we have created:
 	CMD node app.js 
-
-# Packaging the application
+<br>	
+## Packaging the application
 Run following commands in terminal.
 buld: "-t" is the tag, "hello-docker" is the file to be created,"." is the current directory. :
 	docker build -t hello-docker .
-# Docker image
+<br>	
+## Docker image
 To view all images run:
 	docker image ls
 or:
@@ -83,7 +84,7 @@ or:
 To run the image, regardless of the directory on is, run :
 	docker run hello-docker
 	
-# Create repository in docker hub
+## Create repository in docker hub
 url -> https://hub.docker.com/repositories/martinngigi
 Create docker image docker hub similar to the one present locally
 
@@ -98,8 +99,8 @@ i.e. 2 (Working)
 	docker login -u martinngigi
 	docker tag hello-docker:latest martinngigi/hello-docker:myfirstimagepush
 	docker push martinngigi/hello-docker:myfirstimagepush
-
-# Pulling docker image and it in play-with-docker:
+<br>	
+## Pulling docker image and it in play-with-docker:
 url -> https://labs.play-with-docker.com/
 	docker login
 	docker pull martinngigi/hello-docker:myfirstimagepush
@@ -107,7 +108,8 @@ url -> https://labs.play-with-docker.com/
 run docker while in play-with-docker
 	docker run martinngigi/hello-docker:myfirstimagepush
 	
-#LINUX COMMANDS(Ubuntu)
+	<br>	
+## LINUX COMMANDS(Ubuntu)
 cd C:\Users\Administrator\Desktop\Docker\docker-tutorial-1\hello-docker>
 Running ubuntu:
 	docker run ubuntu
@@ -128,7 +130,8 @@ run following commands:
 	echo $0 					-> This will show current dir of the program
 	history						-> This will show previously typed commands
 	
-# Managing packages
+<br>	
+## Managing packages
 while in "root@bfccb2f89288:/#" 
 apt -> advanced package tool
 run:
@@ -150,17 +153,17 @@ remove/delete nano:
 	apt remove nano
 	
 	
-# LINUX Directory
+## LINUX Directory
 / -> Root 
-	/bin -> binaries or programs.
-	/boot -> booting files.
-	/dev -> devices.
-	/etc -> editable text configuration.
-	/home -> users are stored here.
-	/root -> root directory for each user.
-	/lib -> library files.
-	/var -> where files are updated frequently
-	/proc -> running process.
+	- /bin -> binaries or programs.
+	- /boot -> booting files.
+	- /dev -> devices.
+	- /etc -> editable text configuration.
+	- /home -> users are stored here.
+	- /root -> root directory for each user.
+	- /lib -> library files.
+	- /var -> where files are updated frequently
+	- /proc -> running process.
 	
 	
 	
